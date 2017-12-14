@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme"
+           parent="QMUI.Compat.NoActionBar">
+        <!-- 配置qmui提供的theme -->
+        <!-- 主题颜色 -->
+        <item name="qmui_config_color_blue">@color/colorPrimary</item>
+
+        <!--topbar样式-->
+        <item name="qmui_topbar_title_color">@color/qmui_config_color_white</item>
+        <item name="qmui_topbar_subtitle_color">@color/qmui_config_color_white</item>
+        <item name="qmui_topbar_text_btn_color_state_list">@color/s_topbar_btn_color</item>
+        <item name="qmui_topbar_height">48dp</item>
+        <item name="qmui_topbar_image_btn_height">48dp</item>
+        <item name="QMUITopBarStyle">@style/QDTopBar</item>
+    </style>
+
+    <style name="QDTopBar"
+           parent="QMUI.TopBar">
+        <!--topbar的背景颜色-->
+        <item name="qmui_topbar_bg_color">@color/colorPrimary</item>
+    </style>
+</resources>

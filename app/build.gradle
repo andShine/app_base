@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.andshine.app"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    // 配置lambda
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation 'me.yokeyword:fragmentation:1.1.9'
+    implementation 'me.yokeyword:fragmentation-swipeback:1.1.9'
+    implementation 'me.yokeyword:eventbus-activity-scope:1.1.0'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+    implementation 'com.blankj:utilcode:1.9.12'
+    implementation('com.qmuiteam:qmui:1.0.4') {
+        transitive = false
+    }
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation('com.lzy.net:okgo:3.0.1') {
+        exclude module: 'okhttp'
+    }
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+    implementation 'com.google.code.gson:gson:2.8.1'
+
+    implementation ('com.alibaba.android:vlayout:1.2.6@aar') {
+        transitive = true
+    }
+}
