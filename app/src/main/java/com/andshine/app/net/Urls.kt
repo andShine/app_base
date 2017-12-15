@@ -11,6 +11,6 @@ object Urls {
 
     val SERVER = SERVER_TEST
 
-    // 企业模型入口
-    val URL_query = SERVER + "eat/query"
+    // 请求的URL
+    val URL_QUERY = SERVER + "eat/query"
 }
